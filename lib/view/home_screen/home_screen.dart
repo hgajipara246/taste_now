@@ -10,7 +10,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        iconTheme: IconThemeData(
+        iconTheme: const IconThemeData(
           color: Color(0xFFF72D57),
         ),
         centerTitle: true,
@@ -34,7 +34,7 @@ class HomeScreen extends StatelessWidget {
           ),
         ],
       ),
-      drawer: Drawer(),
+      drawer: const Drawer(),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
@@ -65,7 +65,7 @@ class HomeScreen extends StatelessWidget {
                                 ScreenUtil().screenWidth / 20,
                               ),
                             ),
-                            child: Icon(
+                            child: const Icon(
                               Icons.search,
                               color: Colors.white,
                             ),
@@ -75,13 +75,13 @@ class HomeScreen extends StatelessWidget {
                       enabled: true,
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(ScreenUtil().screenWidth / 10),
-                        borderSide: BorderSide(
+                        borderSide: const BorderSide(
                           color: Colors.red,
                         ),
                       ),
                       focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(ScreenUtil().screenWidth / 10),
-                        borderSide: BorderSide(
+                        borderSide: const BorderSide(
                           color: Colors.red,
                         ),
                       ),
@@ -95,7 +95,7 @@ class HomeScreen extends StatelessWidget {
                       height: ScreenUtil().screenHeight / 5.5,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(ScreenUtil().screenHeight / 40),
-                        color: Color(0xFFF72D57),
+                        color: const Color(0xFFF72D57),
                       ),
                     ),
                     Padding(
@@ -126,7 +126,7 @@ class HomeScreen extends StatelessWidget {
                           Text(
                             '25% OFF',
                             style: TextStyle(
-                              color: Color(0xFFEFF1C5),
+                              color: const Color(0xFFEFF1C5),
                               fontSize: ScreenUtil().screenHeight / 25,
                               fontFamily: 'Poppins',
                               fontWeight: FontWeight.w700,
@@ -154,7 +154,7 @@ class HomeScreen extends StatelessWidget {
                   children: [
                     Container(
                       decoration: BoxDecoration(
-                        color: Color(0xFFECECEC),
+                        color: const Color(0xFFECECEC),
                         borderRadius: BorderRadius.circular(ScreenUtil().screenHeight / 80),
                       ),
                       child: Column(
@@ -187,7 +187,7 @@ class HomeScreen extends StatelessWidget {
                           Container(
                             height: ScreenUtil().screenHeight / 9.5,
                             decoration: BoxDecoration(
-                              color: Color(0xFFECECEC),
+                              color: const Color(0xFFECECEC),
                               borderRadius: BorderRadius.circular(ScreenUtil().screenHeight / 80),
                             ),
                             child: Row(
@@ -204,7 +204,7 @@ class HomeScreen extends StatelessWidget {
                                     ),
                                   ),
                                 ),
-                                Spacer(),
+                                const Spacer(),
                                 ClipRRect(
                                   borderRadius: BorderRadius.only(bottomRight: Radius.circular(ScreenUtil().screenWidth / 80)),
                                   child: Image.asset(
@@ -224,7 +224,7 @@ class HomeScreen extends StatelessWidget {
                                     height: ScreenUtil().screenHeight / 12,
                                     width: ScreenUtil().screenWidth / 3.1,
                                     decoration: BoxDecoration(
-                                      color: Color(0xFFECECEC),
+                                      color: const Color(0xFFECECEC),
                                       borderRadius: BorderRadius.circular(ScreenUtil().screenHeight / 80),
                                     ),
                                     child: Padding(
@@ -263,7 +263,7 @@ class HomeScreen extends StatelessWidget {
                                     height: ScreenUtil().screenHeight / 12,
                                     width: ScreenUtil().screenWidth / 3.1,
                                     decoration: BoxDecoration(
-                                      color: Color(0xFFECECEC),
+                                      color: const Color(0xFFECECEC),
                                       borderRadius: BorderRadius.circular(ScreenUtil().screenHeight / 80),
                                     ),
                                     child: Padding(
@@ -271,7 +271,7 @@ class HomeScreen extends StatelessWidget {
                                         top: (ScreenUtil().screenWidth / 40),
                                         left: (ScreenUtil().screenWidth / 12),
                                       ),
-                                      child: Text(
+                                      child: const Text(
                                         'Ice cream',
                                         textAlign: TextAlign.center,
                                         style: TextStyle(
@@ -303,7 +303,7 @@ class HomeScreen extends StatelessWidget {
                   ],
                 ),
                 Divider(
-                  color: Color(0xFFEDEDED),
+                  color: const Color(0xFFEDEDED),
                   thickness: 2,
                   height: (ScreenUtil().screenWidth / 10),
                 ),
@@ -323,7 +323,7 @@ class HomeScreen extends StatelessWidget {
                   height: ScreenUtil().screenHeight / 5,
                   child: ListView.separated(
                     itemCount: 4,
-                    physics: BouncingScrollPhysics(),
+                    physics: const BouncingScrollPhysics(),
                     scrollDirection: Axis.horizontal,
                     shrinkWrap: true,
                     itemBuilder: (context, index) => Column(
@@ -361,7 +361,7 @@ class HomeScreen extends StatelessWidget {
                 ),
                 Padding(
                   padding: EdgeInsets.symmetric(vertical: ScreenUtil().screenHeight / 60),
-                  child: Text(
+                  child: const Text(
                     'Top Offers',
                     style: TextStyle(
                       color: Colors.black,
@@ -374,8 +374,8 @@ class HomeScreen extends StatelessWidget {
                 Container(
                   width: double.infinity,
                   decoration: BoxDecoration(
-                    color: Color(0xFFFFFFFF),
-                    boxShadow: [
+                    color: const Color(0xFFFFFFFF),
+                    boxShadow: const [
                       BoxShadow(
                         color: Colors.black12,
                         blurRadius: 8,
@@ -442,8 +442,8 @@ class HomeScreen extends StatelessWidget {
                 Container(
                   width: double.infinity,
                   decoration: BoxDecoration(
-                    color: Color(0xFFFFFFFF),
-                    boxShadow: [
+                    color: const Color(0xFFFFFFFF),
+                    boxShadow: const [
                       BoxShadow(
                         color: Colors.black12,
                         blurRadius: 8,
