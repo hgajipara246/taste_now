@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:taste_now/res/constant/app_assets.dart';
 import 'package:taste_now/res/constant/app_string.dart';
+import 'package:taste_now/view/home_screen/home_controller.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends GetView<HomeController> {
   const HomeScreen({super.key});
 
   @override
@@ -331,12 +333,12 @@ class HomeScreen extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Image.asset(
-                          "assets/images/home_screen_image/makeD.png",
+                          "${controller.tasteNowModelNewlyOpened.newlyOpened![index].image}",
                           height: ScreenUtil().screenHeight / 8,
                         ),
                         SizedBox(height: ScreenUtil().screenHeight / 70),
                         Text(
-                          'Mc Donald’s',
+                          "${controller.tasteNowModelNewlyOpened.newlyOpened![index].title}",
                           style: TextStyle(
                             color: Colors.black,
                             fontSize: ScreenUtil().screenWidth / 24,
@@ -346,7 +348,7 @@ class HomeScreen extends StatelessWidget {
                           overflow: TextOverflow.visible,
                         ),
                         Text(
-                          '10-25 mins',
+                          "${controller.tasteNowModelNewlyOpened.newlyOpened![index].time}",
                           style: TextStyle(
                             color: Colors.black,
                             fontSize: ScreenUtil().screenWidth / 30,
