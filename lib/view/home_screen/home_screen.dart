@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:taste_now/res/constant/app_assets.dart';
 import 'package:taste_now/res/constant/app_string.dart';
+import 'package:taste_now/utils/routes/routes_name.dart';
 import 'package:taste_now/view/home_screen/home_controller.dart';
 
 class HomeScreen extends GetView<HomeController> {
@@ -138,7 +139,7 @@ class HomeScreen extends GetView<HomeController> {
                       ),
                     ),
                     Positioned(
-                      left: ScreenUtil().screenWidth / 2.5,
+                      left: ScreenUtil().screenWidth / 2,
                       top: ScreenUtil().screenHeight / 30,
                       child: Image.asset(
                         AppAssets.pizza,
@@ -373,139 +374,145 @@ class HomeScreen extends GetView<HomeController> {
                     ),
                   ),
                 ),
-                Container(
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    color: const Color(0xFFFFFFFF),
-                    boxShadow: const [
-                      BoxShadow(
-                        color: Colors.black12,
-                        blurRadius: 8,
-                        spreadRadius: 1,
-                      ),
-                    ],
-                    borderRadius: BorderRadius.circular(ScreenUtil().screenWidth / 60),
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.asset(
-                        "assets/images/home_screen_image/Pepperoni pizza.png",
-                        height: ScreenUtil().screenHeight / 10,
-                      ),
-                      Padding(
-                        padding: EdgeInsets.symmetric(vertical: ScreenUtil().screenHeight / 90),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              'Pepperoni pizza',
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: ScreenUtil().screenWidth / 28,
-                                fontFamily: 'Poppins',
-                                fontWeight: FontWeight.w700,
-                              ),
-                            ),
-                            SizedBox(height: ScreenUtil().screenHeight / 120),
-                            Text(
-                              'Di Napoles',
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: ScreenUtil().screenWidth / 34,
-                                fontFamily: 'Poppins',
-                                fontWeight: FontWeight.w300,
-                              ),
-                            ),
-                            SizedBox(height: ScreenUtil().screenHeight / 70),
-                            Text(
-                              '\$13,99',
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: ScreenUtil().screenWidth / 28,
-                                fontFamily: 'Poppins',
-                                fontWeight: FontWeight.w700,
-                              ),
-                            ),
-                          ],
+                InkWell(
+                  onTap: () => Get.offNamed(RoutesName.profileScreen),
+                  child: Container(
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      color: const Color(0xFFFFFFFF),
+                      boxShadow: const [
+                        BoxShadow(
+                          color: Colors.black12,
+                          blurRadius: 8,
+                          spreadRadius: 1,
                         ),
-                      ),
-                      SizedBox(width: ScreenUtil().screenWidth / 20),
-                      Image.asset(
-                        "assets/icons/rating.png",
-                        height: ScreenUtil().screenHeight / 30,
-                      ),
-                    ],
+                      ],
+                      borderRadius: BorderRadius.circular(ScreenUtil().screenWidth / 60),
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Image.asset(
+                          "assets/images/home_screen_image/Pepperoni pizza.png",
+                          height: ScreenUtil().screenHeight / 10,
+                        ),
+                        Padding(
+                          padding: EdgeInsets.symmetric(vertical: ScreenUtil().screenHeight / 90),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'Pepperoni pizza',
+                                style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: ScreenUtil().screenWidth / 28,
+                                  fontFamily: 'Poppins',
+                                  fontWeight: FontWeight.w700,
+                                ),
+                              ),
+                              SizedBox(height: ScreenUtil().screenHeight / 120),
+                              Text(
+                                'Di Napoles',
+                                style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: ScreenUtil().screenWidth / 34,
+                                  fontFamily: 'Poppins',
+                                  fontWeight: FontWeight.w300,
+                                ),
+                              ),
+                              SizedBox(height: ScreenUtil().screenHeight / 70),
+                              Text(
+                                '\$13,99',
+                                style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: ScreenUtil().screenWidth / 28,
+                                  fontFamily: 'Poppins',
+                                  fontWeight: FontWeight.w700,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        SizedBox(width: ScreenUtil().screenWidth / 20),
+                        Image.asset(
+                          "assets/icons/rating.png",
+                          height: ScreenUtil().screenHeight / 30,
+                        ),
+                      ],
+                    ),
                   ),
                 ),
                 SizedBox(height: ScreenUtil().screenHeight / 60),
-                Container(
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    color: const Color(0xFFFFFFFF),
-                    boxShadow: const [
-                      BoxShadow(
-                        color: Colors.black12,
-                        blurRadius: 8,
-                        spreadRadius: 1,
-                      ),
-                    ],
-                    borderRadius: BorderRadius.circular(ScreenUtil().screenWidth / 60),
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.asset(
-                        "assets/images/home_screen_image/Margarita pizza.png",
-                        height: ScreenUtil().screenHeight / 9,
-                      ),
-                      Padding(
-                        padding: EdgeInsets.symmetric(vertical: ScreenUtil().screenHeight / 90),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              'Margarita pizza',
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: ScreenUtil().screenWidth / 28,
-                                fontFamily: 'Poppins',
-                                fontWeight: FontWeight.w700,
-                              ),
-                            ),
-                            SizedBox(height: ScreenUtil().screenHeight / 120),
-                            Text(
-                              'Di Napoles',
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: ScreenUtil().screenWidth / 34,
-                                fontFamily: 'Poppins',
-                                fontWeight: FontWeight.w300,
-                              ),
-                            ),
-                            SizedBox(height: ScreenUtil().screenHeight / 70),
-                            Text(
-                              '\$10,50',
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: ScreenUtil().screenWidth / 28,
-                                fontFamily: 'Poppins',
-                                fontWeight: FontWeight.w700,
-                              ),
-                            ),
-                          ],
+                InkWell(
+                  onTap: () => Get.offNamed(RoutesName.profileScreen),
+                  child: Container(
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      color: const Color(0xFFFFFFFF),
+                      boxShadow: const [
+                        BoxShadow(
+                          color: Colors.black12,
+                          blurRadius: 8,
+                          spreadRadius: 1,
                         ),
-                      ),
-                      SizedBox(width: ScreenUtil().screenWidth / 20),
-                      Image.asset(
-                        "assets/icons/rating.png",
-                        height: ScreenUtil().screenHeight / 30,
-                      ),
-                    ],
+                      ],
+                      borderRadius: BorderRadius.circular(ScreenUtil().screenWidth / 60),
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Image.asset(
+                          "assets/images/home_screen_image/Margarita pizza.png",
+                          height: ScreenUtil().screenHeight / 9,
+                        ),
+                        Padding(
+                          padding: EdgeInsets.symmetric(vertical: ScreenUtil().screenHeight / 90),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'Margarita pizza',
+                                style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: ScreenUtil().screenWidth / 28,
+                                  fontFamily: 'Poppins',
+                                  fontWeight: FontWeight.w700,
+                                ),
+                              ),
+                              SizedBox(height: ScreenUtil().screenHeight / 120),
+                              Text(
+                                'Di Napoles',
+                                style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: ScreenUtil().screenWidth / 34,
+                                  fontFamily: 'Poppins',
+                                  fontWeight: FontWeight.w300,
+                                ),
+                              ),
+                              SizedBox(height: ScreenUtil().screenHeight / 70),
+                              Text(
+                                '\$10,50',
+                                style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: ScreenUtil().screenWidth / 28,
+                                  fontFamily: 'Poppins',
+                                  fontWeight: FontWeight.w700,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        SizedBox(width: ScreenUtil().screenWidth / 20),
+                        Image.asset(
+                          "assets/icons/rating.png",
+                          height: ScreenUtil().screenHeight / 30,
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ],
