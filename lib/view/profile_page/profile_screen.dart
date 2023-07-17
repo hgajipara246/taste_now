@@ -14,9 +14,9 @@ class ProfileScreen extends GetView<ProfileController> {
           Container(
             height: ScreenUtil().screenHeight / 2.5,
             width: double.infinity,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: Color(0xFFF72D57),
-              borderRadius: const BorderRadius.only(
+              borderRadius: BorderRadius.only(
                 bottomRight: Radius.elliptical(100, 40),
                 bottomLeft: Radius.elliptical(100, 40),
               ),
@@ -32,15 +32,15 @@ class ProfileScreen extends GetView<ProfileController> {
                       onPressed: () {
                         Get.back;
                       },
-                      icon: Icon(
+                      icon: const Icon(
                         Icons.chevron_left,
                         color: Colors.white,
                       ),
                     ),
-                    Spacer(),
+                    const Spacer(),
                     IconButton(
                       onPressed: () {},
-                      icon: Icon(
+                      icon: const Icon(
                         Icons.search_rounded,
                         color: Colors.white,
                       ),
@@ -70,7 +70,7 @@ class ProfileScreen extends GetView<ProfileController> {
                               letterSpacing: 0.02,
                             ),
                           ),
-                          Row(
+                          const Row(
                             children: [
                               Icon(
                                 Icons.star,
@@ -107,13 +107,13 @@ class ProfileScreen extends GetView<ProfileController> {
                         child: Container(
                           width: ScreenUtil().screenWidth / 7,
                           height: ScreenUtil().screenWidth / 7,
-                          decoration: ShapeDecoration(
+                          decoration: const ShapeDecoration(
                             color: Colors.white,
                             shape: OvalBorder(),
                           ),
                           child: Icon(
                             Icons.thumb_up_alt_outlined,
-                            color: Color(0xFFF72D57),
+                            color: const Color(0xFFF72D57),
                             size: ScreenUtil().screenHeight / 30,
                           ),
                         ),
