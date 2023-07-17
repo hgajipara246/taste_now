@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:taste_now/utils/routes/routes_name.dart';
 import 'package:taste_now/view/profile_page/profile_controller.dart';
 
 class ProfileScreen extends GetView<ProfileController> {
@@ -12,7 +13,7 @@ class ProfileScreen extends GetView<ProfileController> {
       body: Stack(
         children: [
           Container(
-            height: ScreenUtil().screenHeight / 2.5,
+            height: ScreenUtil().screenHeight / 2.4,
             width: double.infinity,
             decoration: const BoxDecoration(
               color: Color(0xFFF72D57),
@@ -30,7 +31,7 @@ class ProfileScreen extends GetView<ProfileController> {
                   children: [
                     IconButton(
                       onPressed: () {
-                        Get.back;
+                        Get.offNamed(RoutesName.homeScreen);
                       },
                       icon: const Icon(
                         Icons.chevron_left,
